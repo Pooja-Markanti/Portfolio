@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>QA ENGINEER</p>
+            <h1>Hi , I'm <span>Pooja</span><br>Markanti</h1>
+        </div>
+    </div>
+</div>
+<!-- ---------about--------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate and detail-oriented Testing Engineer with 1 year of experience in software quality assurance, specializing in manual and automated testing. I thrive on ensuring seamless user experiences by identifying and resolving defects, enhancing product quality, and streamlining testing processes. My expertise in tools like Selenium and Jira, coupled with a strong foundation in Java and web technologies, allows me to deliver efficient and accurate testing solutions.
+                I enjoy collaborating with cross-functional teams in Agile environments and continuously seek opportunities to expand my knowledge in software testing and development. With a commitment to excellence and innovation, I am dedicated to contributing to the success of every project I undertake.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java, Python, SQL, C</li>
+                        <li><span>Data Engineering</span><br>Mongo DB, MySQL</li>
+                        <li><span>Web Technologies</span><br>HTML5, CSS3, JavaScript, Bootstrap</li>
+                        <li><span>Frameworks</span><br>Spring Boot, Express.js</li>
+                        <li><span>Testing Expertise</span><br>Manual Testing, Selenium</li>
+                        <li><span>Tools</span><br>Git, Jenkins, Postman</li>
+                        <li><span>Methodologies</span><br>Agile, Scrum</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>2021-2022</span><br>QA Automation Engineer at Temenos</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span>2017-2021</span><br>BTech in Computer Science and Engineering</li>
+                        <li><span>2015-2017</span><br>Narayana Junior college</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+        }
+    }
+</script>
+</body>
+</html>
